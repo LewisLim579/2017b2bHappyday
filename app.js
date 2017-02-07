@@ -21,6 +21,8 @@ app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'semantic')));
+//semantic 안의 dist 로 바로 접근 가능
 
 // development only
 if ('development' == app.get('env')) {
